@@ -1,244 +1,265 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kianaz | Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KIANAZ | Portfolio</title>
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-        html {
-            scroll-behavior: smooth;
-        }
+html {
+  scroll-behavior: smooth;
+}
 
-        body {
-            background: #090911;
-            color: #f5f2ff;
-            font-family: Arial, sans-serif;
-            line-height: 1.7;
-            overflow-x: hidden;
-        }
+body {
+  background: #080811;
+  color: #f5f2ff;
+  font-family: Arial, sans-serif;
+  line-height: 1.7;
+  overflow-x: hidden;
+}
 
-        body::before {
-            content: "";
-            position: fixed;
-            width: 350px;
-            height: 350px;
-            background: #8b45ff;
-            filter: blur(150px);
-            opacity: 0.25;
-            top: -100px;
-            left: -100px;
-            z-index: -1;
-        }
+body::before {
+  content: "";
+  position: fixed;
+  width: 350px;
+  height: 350px;
+  top: -100px;
+  left: -100px;
+  background: #873cff;
+  filter: blur(150px);
+  opacity: .3;
+  z-index: -1;
+}
 
-        body::after {
-            content: "";
-            position: fixed;
-            width: 350px;
-            height: 350px;
-            background: #2563eb;
-            filter: blur(150px);
-            opacity: 0.2;
-            bottom: -100px;
-            right: -100px;
-            z-index: -1;
-        }
+body::after {
+  content: "";
+  position: fixed;
+  width: 350px;
+  height: 350px;
+  right: -100px;
+  bottom: -100px;
+  background: #267aff;
+  filter: blur(150px);
+  opacity: .25;
+  z-index: -1;
+}
 
-        nav {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            padding: 25px 15px;
-            flex-wrap: wrap;
-        }
+.container {
+  width: 90%;
+  max-width: 1050px;
+  margin: auto;
+}
 
-        nav a {
-            color: #c9b5ff;
-            text-decoration: none;
-            font-size: 14px;
-            transition: 0.3s;
-        }
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 0;
+}
 
-        nav a:hover {
-            color: white;
-            text-shadow: 0 0 12px #a875ff;
-        }
+.logo {
+  font-size: 25px;
+  font-weight: bold;
+  letter-spacing: 5px;
+  color: #c6a5ff;
+}
 
-        header {
-            min-height: 75vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 50px 20px;
-        }
+nav a {
+  color: #bcb6d1;
+  text-decoration: none;
+  margin-left: 20px;
+  font-size: 13px;
+}
 
-        header h1 {
-            font-size: clamp(45px, 10vw, 75px);
-            letter-spacing: 12px;
-            text-shadow: 0 0 15px #a875ff,
-                         0 0 40px #7838e8;
-        }
+nav a:hover {
+  color: white;
+  text-shadow: 0 0 15px #a56aff;
+}
 
-        header p {
-            color: #c2a5ff;
-            margin-top: 20px;
-            font-size: 17px;
-        }
+.hero {
+  min-height: 570px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 60px 10px;
+}
 
-        .tagline {
-            border: 1px solid #7650aa;
-            border-radius: 30px;
-            padding: 8px 20px;
-            margin-top: 30px;
-            color: #d9caff;
-            background: rgba(120, 70, 200, 0.12);
-            box-shadow: 0 0 20px rgba(150, 90, 255, 0.15);
-        }
+.subtitle {
+  color: #78caff;
+  letter-spacing: 5px;
+  font-size: 12px;
+  margin-bottom: 25px;
+}
 
-        section {
-            max-width: 850px;
-            margin: 35px auto;
-            padding: 35px;
-            background: rgba(30, 25, 45, 0.65);
-            border: 1px solid rgba(180, 140, 255, 0.2);
-            border-radius: 22px;
-            box-shadow: 0 0 30px rgba(120, 70, 200, 0.08);
-            backdrop-filter: blur(12px);
-            transition: 0.3s;
-        }
+h1 {
+  font-size: clamp(55px, 12vw, 105px);
+  letter-spacing: 8px;
+  text-shadow: 0 0 20px #9c63ff,
+               0 0 55px #6331b9;
+}
 
-        section:hover {
-            border-color: rgba(180, 140, 255, 0.55);
-            box-shadow: 0 0 30px rgba(140, 90, 255, 0.15);
-        }
+.hero p {
+  color: #bdb7d0;
+  margin-top: 25px;
+  font-size: 16px;
+}
 
-        h2 {
-            color: #c7a5ff;
-            font-size: 27px;
-            margin-bottom: 20px;
-            text-shadow: 0 0 12px rgba(170, 120, 255, 0.35);
-        }
+.button {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 12px 25px;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  background: linear-gradient(100deg, #8248d9, #347cce);
+  box-shadow: 0 0 25px #7142bd55;
+  transition: .3s;
+}
 
-        section p {
-            color: #d1cbdc;
-            font-size: 16px;
-        }
+.button:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 30px #925eff;
+}
 
-        .skill {
-            display: inline-block;
-            background: rgba(130, 80, 210, 0.18);
-            color: #dfceff;
-            border: 1px solid rgba(180, 140, 255, 0.3);
-            padding: 9px 20px;
-            margin: 7px;
-            border-radius: 25px;
-            transition: 0.3s;
-        }
+section {
+  margin: 35px auto;
+  padding: 35px;
+  border-radius: 18px;
+  background: rgba(28, 25, 48, .7);
+  border: 1px solid rgba(180, 145, 255, .2);
+  backdrop-filter: blur(12px);
+  transition: .3s;
+}
 
-        .skill:hover {
-            background: #8050c8;
-            color: white;
-            box-shadow: 0 0 18px #8050c8;
-        }
+section:hover {
+  border-color: #a77aff88;
+  box-shadow: 0 0 30px #8651d522;
+}
 
-        .contact a {
-            display: inline-block;
-            margin-top: 15px;
-            padding: 10px 23px;
-            color: white;
-            text-decoration: none;
-            border-radius: 25px;
-            background: linear-gradient(90deg, #7544c8, #4169c9);
-            box-shadow: 0 0 18px rgba(130, 80, 220, 0.35);
-        }
+h2 {
+  color: #c5a4ff;
+  font-size: 27px;
+  margin-bottom: 18px;
+}
 
-        footer {
-            text-align: center;
-            color: #827b94;
-            padding: 35px 15px;
-            margin-top: 50px;
-            font-size: 13px;
-        }
+section p {
+  color: #c7c2d6;
+  font-size: 15px;
+}
 
-        @media (max-width: 600px) {
-            nav {
-                gap: 18px;
-            }
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
 
-            header {
-                min-height: 65vh;
-            }
+.skill {
+  padding: 9px 20px;
+  border-radius: 8px;
+  background: #8c59d522;
+  border: 1px solid #a77aff55;
+  color: #ddceff;
+  transition: .3s;
+}
 
-            header h1 {
-                letter-spacing: 7px;
-            }
+.skill:hover {
+  background: #8250c8;
+  box-shadow: 0 0 20px #8250c8;
+}
 
-            section {
-                margin: 22px 15px;
-                padding: 25px;
-            }
-        }
-    </style>
+footer {
+  text-align: center;
+  padding: 35px 10px;
+  color: #77738c;
+  font-size: 12px;
+}
+
+@media(max-width:600px) {
+  nav {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  nav a {
+    margin: 0 7px;
+  }
+
+  h1 {
+    letter-spacing: 4px;
+  }
+
+  section {
+    padding: 25px;
+  }
+}
+</style>
 </head>
 
 <body>
 
-    <nav>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#goals">Goals</a>
-        <a href="#contact">Contact</a>
-    </nav>
+<div class="container">
 
-    <header>
-        <h1>KIANAZ</h1>
-        <p>Future Developer | Programmer | Artist</p>
-        <div class="tagline">Creating my own world.</div>
-    </header>
+<nav>
+  <div class="logo">K.</div>
+  <div>
+    <a href="#about">ABOUT</a>
+    <a href="#skills">SKILLS</a>
+    <a href="#goals">GOALS</a>
+  </div>
+</nav>
 
-    <section id="about">
-        <h2>About Me</h2>
-        <p>
-            Hello! I'm Kianaz.
-            I'm learning programming, exploring technology,
-            and building my creative world.
-        </p>
-    </section>
+<header class="hero">
+  <div class="subtitle">PERSONAL PORTFOLIO · 2026</div>
+  <h1>KIANAZ</h1>
+  <p>Developer in progress. Creative by nature.</p>
+  <a href="#about" class="button">DISCOVER MY WORLD</a>
+</header>
 
-    <section id="skills">
-        <h2>My Skills</h2>
-        <span class="skill">HTML</span>
-        <span class="skill">CSS</span>
-        <span class="skill">English</span>
-        <span class="skill">Italian</span>
-    </section>
+<section id="about">
+  <h2>About Me</h2>
+  <p>
+    I'm Kianaz. I'm building my own path through
+    programming, creativity, music and technology.
+    This is where my journey begins.
+  </p>
+</section>
 
-    <section id="goals">
-        <h2>My Goals</h2>
-        <p>
-            My goal is to become a programmer,
-            explore Artificial Intelligence,
-            create digital projects, and develop my artistic side.
-        </p>
-    </section>
+<section id="skills">
+  <h2>What I'm Learning</h2>
+  <div class="skills">
+    <span class="skill">HTML</span>
+    <span class="skill">CSS</span>
+    <span class="skill">Programming</span>
+    <span class="skill">Web Development</span>
+  </div>
+</section>
 
-    <section id="contact" class="contact">
-        <h2>Contact</h2>
-        <p>My journey is just beginning.</p>
-        <a href="#about">Explore My World</a>
-    </section>
+<section id="goals">
+  <h2>My Vision</h2>
+  <p>
+    To become a skilled programmer, create meaningful
+    digital projects, explore new ideas and grow as an artist.
+    One step at a time.
+  </p>
+</section>
 
-    <footer>
-        © 2026 Kianaz. All rights reserved.
-    </footer>
+<section>
+  <h2>More Coming Soon</h2>
+  <p>This is only the beginning.</p>
+</section>
 
+<footer>
+  © 2026 KIANAZ. All rights reserved.
+</footer>
+
+</div>
 </body>
 </html>
