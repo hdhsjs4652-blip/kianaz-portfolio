@@ -107,60 +107,169 @@
 
 </body>
   </html>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-body {
-    background-color: #101014;
-    color: #ffffff;
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    padding: 30px 20px;
-}
+    <title>Kianaz | Portfolio</title>
 
-header {
-    text-align: center;
-    padding: 70px 10px;
-}
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-header h1 {
-    font-size: 48px;
-    letter-spacing: 8px;
-    color: #ffffff;
-}
+        html {
+            scroll-behavior: smooth;
+        }
 
-header p {
-    color: #b9a0ff;
-    margin-top: 15px;
-}
+        body {
+            background: #101014;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+            line-height: 1.7;
+        }
 
-section {
-    max-width: 800px;
-    margin: 40px auto;
-    padding: 25px;
-    background-color: #1c1b24;
-    border-radius: 15px;
-}
+        header {
+            min-height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 30px 20px;
+        }
 
-h2 {
-    color: #c5a6ff;
-    margin-bottom: 15px;
-}
+        header h1 {
+            font-size: 55px;
+            letter-spacing: 10px;
+            color: #ffffff;
+        }
 
-.skill {
-    display: inline-block;
-    background-color: #302744;
-    color: #d6c5ff;
-    padding: 10px 18px;
-    margin: 6px;
-    border-radius: 20px;
-}
+        header p {
+            color: #b9a0ff;
+            margin-top: 15px;
+            font-size: 17px;
+        }
 
-footer {
-    text-align: center;
-    color: #888;
-    margin-top: 50px;
-}
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            padding: 20px;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: #c5a6ff;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            color: white;
+        }
+
+        section {
+            max-width: 800px;
+            margin: 35px auto;
+            padding: 30px;
+            background: #1c1b24;
+            border: 1px solid #302744;
+            border-radius: 18px;
+        }
+
+        h2 {
+            color: #c5a6ff;
+            margin-bottom: 15px;
+        }
+
+        .skill {
+            display: inline-block;
+            background: #302744;
+            color: #d6c5ff;
+            padding: 8px 17px;
+            margin: 6px;
+            border-radius: 20px;
+        }
+
+        .contact a {
+            color: #c5a6ff;
+            text-decoration: none;
+        }
+
+        footer {
+            text-align: center;
+            color: #777;
+            padding: 30px;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 38px;
+                letter-spacing: 6px;
+            }
+
+            section {
+                margin: 20px 15px;
+                padding: 22px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#goals">Goals</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <header>
+        <h1>KIANAZ</h1>
+        <p>Future Developer | Programmer | Artist</p>
+    </header>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>
+            Hello! I'm Kianaz.
+            I'm learning programming and exploring
+            the world of technology and creativity.
+        </p>
+    </section>
+
+    <section id="skills">
+        <h2>My Skills</h2>
+
+        <span class="skill">HTML</span>
+        <span class="skill">CSS</span>
+        <span class="skill">English</span>
+        <span class="skill">Italian</span>
+    </section>
+
+    <section id="goals">
+        <h2>My Goals</h2>
+        <p>
+            My goal is to become a programmer,
+            explore Artificial Intelligence,
+            and build creative projects.
+        </p>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Contact</h2>
+        <p>More projects coming soon.</p>
+    </section>
+
+    <footer>
+        <p>© 2026 Kianaz. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
